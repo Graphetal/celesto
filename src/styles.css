@@ -1,0 +1,26 @@
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
