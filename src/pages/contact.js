@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Box, Container, Grid, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 
-import Layout from "./../components/Layout"
+import Layout from "./../components/layout"
 import GridColorBar from "./../components/GridColorBar"
 import Section from "./../components/Section"
 
