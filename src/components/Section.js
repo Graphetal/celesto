@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles"
 const useStyles = makeStyles(theme => ({
   root: {
     borderBottom: "5px solid #F8F9FD",
-    height: "100vh",
+    minHeight: "100vh",
     /* [theme.breakpoints.up("lg")]: {
       height: "100vh",
     }, */
@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
 const Section = ({
   id = "",
   children,
+  name = "",
   py = 10,
   bgcolor = "transparent",
   pb = 10,
@@ -31,13 +32,14 @@ const Section = ({
     <>
       <Box
         id={id}
-        className={classes.root}
+        name={name}
+        className={`section ${classes.root}`}
         bgcolor={bgcolor}
         borderBottom="5px solid #F8F9FD"
         component="section"
         overflow="hidden"
-        /* py={py}
-        pb={pb} */
+        py={py}
+        pb={pb}
         mb={mb}
         display="flex"
         alignItems="center"

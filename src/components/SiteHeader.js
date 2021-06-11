@@ -30,7 +30,7 @@ const SiteHeader = () => {
     <AppBar className={classes.root} position="fixed">
       <Toolbar className={classes.toolbar}>
         <Link to="/">
-          <StaticImage src="./../images/celesto-white.png" />
+          <StaticImage loading="eager" src="./../images/celesto-white.png" />
         </Link>
         <ModalButton />
       </Toolbar>

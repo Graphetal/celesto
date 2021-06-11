@@ -8,6 +8,9 @@ import {
 import SiteHeader from "./SiteHeader"
 import SiteFooter from "./SiteFooter"
 
+import { Helmet } from "react-helmet"
+import BackgroundVideo from "./../images/background-video.mp4"
+
 const theme = createMuiTheme({
   overrides: {
     MuiButton: {
@@ -51,6 +54,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
+    fontFamily: "Rajdhani, sans-serif",
     button: {
       fontSize: "1.125rem",
       fontWeight: 600,
@@ -114,11 +118,14 @@ const Layout = ({ children }) => {
   const classes = useStyles()
   return (
     <ThemeProvider theme={theme}>
+      <Helmet>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
       <SiteHeader />
-
-      <video className={classes.video} autoplay="true" muted={true} loop={true}>
-        <source type="video/mp4" src="/static/background-video.mp4" />
-      </video>
       {children}
       <SiteFooter />
     </ThemeProvider>

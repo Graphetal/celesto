@@ -32,7 +32,7 @@ const HeroSection = () => {
   const classes = useStyles()
 
   return (
-    <section id="celesto-hero" className={classes.root}>
+    <section id="celesto-hero" className={`section ${classes.root}`}>
       <Container className={classes.container} maxWidth="md">
         <Box
           display="flex"

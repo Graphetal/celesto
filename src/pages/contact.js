@@ -9,8 +9,17 @@ import { makeStyles } from "@material-ui/core/styles"
 import Layout from "./../components/layout"
 import GridColorBar from "./../components/GridColorBar"
 import Section from "./../components/Section"
+import BackgroundVideo from "./../images/background-video.mp4"
 
 const useStyles = makeStyles(theme => ({
+  video: {
+    position: "fixed",
+    left: 0,
+    bottom: 0,
+    minWidth: "100%",
+    minHeight: "100%",
+    zIndex: -4,
+  },
   title: {
     display: "inline-block",
     marginBottom: theme.spacing(10),
@@ -21,10 +30,13 @@ const ContactPage = () => {
   const classes = useStyles()
   return (
     <Layout>
+      <video className={classes.video} autoplay="true" muted={true} loop={true}>
+        <source type="video/mp4" src={BackgroundVideo} />
+      </video>
       <Section>
         <Container>
           <Grid container alignItems="center" justify="center" spacing={10}>
-            <Grid item md={6}>
+            <Grid item sm={6}>
               <Typography color="textPrimary" component="div">
                 <Typography className={classes.title} variant="h2">
                   About
@@ -63,7 +75,7 @@ const ContactPage = () => {
                 </Typography>
               </Typography>
             </Grid>
-            <Grid item md={6}>
+            <Grid item sm={6}>
               <Box display="flex" justifyContent="flex-end" position="relative">
                 <StaticImage src="./../images/map.png" />
               </Box>
