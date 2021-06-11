@@ -60,11 +60,13 @@ const ContactPage = () => {
                   <br />
                 </Typography>
                 <Link to="/">
-                  <Typography paragraph>
-                    <Box component="span" color="common.orange">
-                      View in Google Maps
-                    </Box>
-                  </Typography>
+                  <Box clone display="inline-block">
+                    <Typography paragraph>
+                      <Box component="span" color="common.orange">
+                        View in Google Maps
+                      </Box>
+                    </Typography>
+                  </Box>
                 </Link>
                 <Typography paragraph>
                   <Box component="span" fontWeight={700}>
@@ -97,36 +99,38 @@ const ContactPage = () => {
               Contact Us
               <GridColorBar />
             </Typography>
-            <TextField
-              fullWidth
-              margin="normal"
-              variant="outlined"
-              label="Name"
-            />
-            <TextField
-              fullWidth
-              margin="normal"
-              variant="outlined"
-              label="Email"
-              type="email"
-            />
-            <TextField
-              fullWidth
-              margin="normal"
-              variant="outlined"
-              label="Subject"
-            />
-            <TextField
-              fullWidth
-              margin="normal"
-              variant="outlined"
-              label="Comments"
-              multiline
-              rows={5}
-            />
-            <Box clone mt={2}>
-              <Button variant="contained">Send</Button>
-            </Box>
+            <form action="mailto:info@celesto.com" method="post">
+              <TextField
+                fullWidth
+                margin="normal"
+                variant="outlined"
+                label="Name"
+              />
+              <TextField
+                fullWidth
+                margin="normal"
+                variant="outlined"
+                label="Email"
+                type="email"
+              />
+              <TextField
+                fullWidth
+                margin="normal"
+                variant="outlined"
+                label="Subject"
+              />
+              <TextField
+                fullWidth
+                margin="normal"
+                variant="outlined"
+                label="Comments"
+                multiline
+                rows={5}
+              />
+              <Box clone mt={2}>
+                <Button variant="contained">Send</Button>
+              </Box>
+            </form>
           </Typography>
         </Container>
       </Section>
