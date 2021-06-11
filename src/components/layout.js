@@ -8,6 +8,8 @@ import {
 import SiteHeader from "./SiteHeader"
 import SiteFooter from "./SiteFooter"
 
+import styles from "./../styles.css"
+
 import { Helmet } from "react-helmet"
 import BackgroundVideo from "./../images/background-video.mp4"
 
@@ -15,13 +17,22 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
+        borderRadius: "50px",
         boxShadow: "none",
-        padding: "1rem 3rem",
+        padding: "1rem 5rem",
       },
 
       sizeSmall: {
         fontSize: "1.125rem",
         padding: ".5rem 2.5rem",
+      },
+
+      contained: {
+        backgroundColor: "#FBA61B",
+        color: "white",
+        "&:hover": {
+          backgroundColor: "#d48708",
+        },
       },
     },
   },
@@ -58,8 +69,8 @@ const theme = createMuiTheme({
     button: {
       fontSize: "1.125rem",
       fontWeight: 600,
-      textTransform: "none",
     },
+
     h1: {
       fontSize: "2.5rem",
       fontWeight: 700,
@@ -87,7 +98,7 @@ const theme = createMuiTheme({
     },
     body1: {
       fontSize: ".875rem",
-      fontWeight: 500,
+      fontWeight: 300,
       lineHeight: "28px",
       "@media (min-width:960px)": {
         fontSize: "1rem",

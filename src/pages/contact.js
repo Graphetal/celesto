@@ -3,7 +3,14 @@ import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import { Box, Container, Grid, Typography } from "@material-ui/core"
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  TextField,
+  Typography,
+} from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 
 import Layout from "./../components/layout"
@@ -35,8 +42,8 @@ const ContactPage = () => {
       </video>
       <Section>
         <Container>
-          <Grid container alignItems="center" justify="center" spacing={10}>
-            <Grid item sm={6}>
+          <Grid container alignItems="center" spacing={10}>
+            <Grid item md={6}>
               <Typography color="textPrimary" component="div">
                 <Typography className={classes.title} variant="h2">
                   About
@@ -75,7 +82,7 @@ const ContactPage = () => {
                 </Typography>
               </Typography>
             </Grid>
-            <Grid item sm={6}>
+            <Grid item md={6}>
               <Box display="flex" justifyContent="flex-end" position="relative">
                 <StaticImage src="./../images/map.png" />
               </Box>
@@ -90,6 +97,36 @@ const ContactPage = () => {
               Contact Us
               <GridColorBar />
             </Typography>
+            <TextField
+              fullWidth
+              margin="normal"
+              variant="outlined"
+              label="Name"
+            />
+            <TextField
+              fullWidth
+              margin="normal"
+              variant="outlined"
+              label="Email"
+              type="email"
+            />
+            <TextField
+              fullWidth
+              margin="normal"
+              variant="outlined"
+              label="Subject"
+            />
+            <TextField
+              fullWidth
+              margin="normal"
+              variant="outlined"
+              label="Comments"
+              multiline
+              rows={5}
+            />
+            <Box clone mt={2}>
+              <Button variant="contained">Send</Button>
+            </Box>
           </Typography>
         </Container>
       </Section>
